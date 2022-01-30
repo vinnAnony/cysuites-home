@@ -1,12 +1,3 @@
-@import "fontawesome/fontawesome";
-.calendar-icon{
-  @extend %fa-icon;
-  @extend .fas;
-
-  &:before {
-    content: fa-content($fa-var-calendar);
-  }
-}
 
 $font-path: "../fonts/" !default;
 @font-face{
@@ -81,58 +72,6 @@ $proxima-light: ProximaNovaLight, serif;
   display: grid;
   background-image: url('../images/home-bg.jpeg');
   background-size: cover;
-
-  nav{
-    width: 100%;
-    height: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
-    background-color: #0005;
-    line-height: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    .navbar-brand {
-      float: left;
-      margin-left: 10em;
-      margin-top: 10px;
-      color: white;
-      height: inherit;
-    }
-
-    ul{
-      float: right;
-      margin-right: 30px;
-
-      li{
-        list-style-type: none;
-        display: inline-block;
-        transition: 0.7s all;
-
-        a{
-          font-family: $proxima-bold;
-          font-size: 12px;
-          text-decoration: none;
-          color: #fff;
-          padding: 15px;
-        }
-
-        &:hover{
-          background-color:$cysuite-orange;
-        }
-      }
-    }
-    button{
-      font-family: $proxima-bold;
-      color: $cysuite-white;
-      padding: 0.5em 1.5em 0.5em;
-      margin: 1em auto;
-      background-color: $cysuite-orange;
-      border: none;
-      border-radius: 3px;
-    }
-  }
 
   .heading {
     @include cysuite-heading;
@@ -357,6 +296,7 @@ $proxima-light: ProximaNovaLight, serif;
 .footer{
   background-color: $cysuite-grey;
   padding-top: 5%;
+  font-size: 12px;
 
   .footer-text{
     font-family: $proxima-light;
@@ -372,7 +312,7 @@ $proxima-light: ProximaNovaLight, serif;
   .title{
     color: black;
     font-family: $proxima-bold;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 
     @media (max-width: 480px){
       padding-top: 35px;
@@ -381,8 +321,8 @@ $proxima-light: ProximaNovaLight, serif;
   }
   .copyright{
     color: black;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     font-family: $proxima-bold;
     text-align: center;
   }
@@ -395,5 +335,101 @@ $proxima-light: ProximaNovaLight, serif;
     @media (max-width: 480px){
         text-align: center;
     }
+  }
+}
+
+
+.nav-area{
+  background: #0005;
+  height: 62px;
+  width: 100%;
+  font-family: $proxima-bold;
+
+  ul{
+    float: right;
+    margin-right: 20px;
+
+    li {
+      display: inline-block;
+      line-height: 60px;
+      margin: 0 5px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        padding: 22px 15px;
+        font-weight: bold;
+
+        &:hover{
+          background: darkorange;
+          transition: .5s;
+        }
+      }
+
+      button{
+        font-family: $proxima-bold;
+        color: $cysuite-white;
+        padding: 0.5em 1.5em 0.5em;
+        margin: 1em auto;
+        background-color: $cysuite-orange;
+        border: none;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+.logo {
+  width: 100px;
+  line-height: 70px;
+  padding: 0 40px;
+}
+.btn-area{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 62px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#box{
+  display: none;
+}
+@media (max-width: 955px){
+  .btn-area{
+    display: block;
+  }
+  .nav-area ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    top: 62px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+
+    li {
+      display: block;
+      margin: 0;
+      line-height: 30px;
+      padding: 25px 0;
+
+      a{
+        font-size: 30px;
+
+        &:hover{
+          background: none;
+        }
+      }
+
+      &:hover{
+        background: $cysuite-orange;
+      }
+    }
+  }
+  #box:checked ~ ul{
+    left: 0;
   }
 }
