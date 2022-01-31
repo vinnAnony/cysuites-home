@@ -75,7 +75,6 @@ $proxima-light: ProximaNovaLight, serif;
   .heading {
     @include cysuite-heading;
     text-align: left;
-    padding-top: 30%;
   }
 
   .description {
@@ -89,7 +88,7 @@ $proxima-light: ProximaNovaLight, serif;
   //1st section
   .main-grid-head {
     grid-area: header;
-    margin-left: 20%;
+    margin-left: 12%;
 
     button{
       @include solid-gradient-btn;
@@ -97,8 +96,8 @@ $proxima-light: ProximaNovaLight, serif;
   }
   .main-grid-footer {
     grid-area: footer;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 12%;
+    margin-right: 12%;
 
     .wrapper-txt {
       grid-area: txt;
