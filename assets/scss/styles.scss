@@ -63,7 +63,6 @@ $proxima-light: ProximaNovaLight, serif;
   margin:0;
   padding:0;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
 .main{
@@ -103,7 +102,7 @@ $proxima-light: ProximaNovaLight, serif;
 
     .wrapper-txt {
       grid-area: txt;
-      margin-left: 10%;
+      align-items: center;
       @include flex-col-center;
 
       p{
@@ -113,7 +112,6 @@ $proxima-light: ProximaNovaLight, serif;
     }
     .wrapper-date {
       grid-area: date;
-      margin-left: 10%;
       @include flex-row-center;
 
       input{
@@ -151,18 +149,17 @@ $proxima-light: ProximaNovaLight, serif;
       width: 100%;
       height: 100px;
       background: $cysuite-gradient;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-      grid-template-areas:
-              "txt date date . btn";
-
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
   }
 
   .container {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
     grid-template-rows: auto;
     grid-template-areas:
             "header header . . ."
@@ -197,7 +194,11 @@ $proxima-light: ProximaNovaLight, serif;
     }
   }
   .grid-image{
-
+    margin-top: 10%;
+    margin-bottom: -30px;
+    img{
+      border-radius: 10px;
+    }
   }
 
   .grid{
@@ -206,7 +207,7 @@ $proxima-light: ProximaNovaLight, serif;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     grid-template-rows: auto;
 
-    @media (max-width: 480px){
+    @media (max-width: 1000px){
       grid-template-columns: repeat(1, minmax(300px, 1fr));
     }
   }
@@ -240,8 +241,11 @@ $proxima-light: ProximaNovaLight, serif;
       column-gap: 10px;
       row-gap: 10px;
 
-      @media (max-width: 480px){
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      @media (max-width: 950px){
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+      }
+      @media (max-width: 450px){
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
       }
 
       img{
@@ -302,6 +306,10 @@ $proxima-light: ProximaNovaLight, serif;
     font-family: $proxima-light;
     font-weight: 900;
     color: $cysuite-footerTxt;
+
+    ul li{
+      list-style-type: none;
+    }
   }
 
   hr{
@@ -322,7 +330,7 @@ $proxima-light: ProximaNovaLight, serif;
   .copyright{
     color: black;
     margin-top: 2%;
-    margin-bottom: 2%;
+    padding-bottom: 2%;
     font-family: $proxima-bold;
     text-align: center;
   }
@@ -342,9 +350,10 @@ $proxima-light: ProximaNovaLight, serif;
     flex-direction: row;
 
     li{
+      list-style-type: none;
       margin-right: 30px;
       img{
-        height: 32px;
+        height: 15px;
       }
     }
   }
