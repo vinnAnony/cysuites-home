@@ -336,6 +336,18 @@ $proxima-light: ProximaNovaLight, serif;
         text-align: center;
     }
   }
+
+  .socials-icons{
+    display: flex;
+    flex-direction: row;
+
+    li{
+      margin-right: 30px;
+      img{
+        height: 32px;
+      }
+    }
+  }
 }
 
 
@@ -357,7 +369,7 @@ $proxima-light: ProximaNovaLight, serif;
       a {
         text-decoration: none;
         color: #fff;
-        font-size: 14px;
+        font-size: 10px;
         padding: 22px 15px;
         font-weight: bold;
 

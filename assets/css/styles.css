@@ -258,6 +258,13 @@
     @media (max-width: 480px) {
       .footer .grid-row {
         text-align: center; } }
+  .footer .socials-icons {
+    display: flex;
+    flex-direction: row; }
+    .footer .socials-icons li {
+      margin-right: 30px; }
+      .footer .socials-icons li img {
+        height: 32px; }
 
 .nav-area {
   background: #0005;
@@ -274,7 +281,7 @@
       .nav-area ul li a {
         text-decoration: none;
         color: #fff;
-        font-size: 14px;
+        font-size: 10px;
         padding: 22px 15px;
         font-weight: bold; }
         .nav-area ul li a:hover {
