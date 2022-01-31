@@ -188,6 +188,18 @@
       @media (max-width: 450px) {
         .products .container .products-grid {
           grid-template-columns: repeat(1, minmax(200px, 1fr)); } }
+      .products .container .products-grid .img-container {
+        position: relative;
+        text-align: center;
+        color: white; }
+        .products .container .products-grid .img-container .img-text {
+          font-family: ProximaNovaBold, serif;
+          font-weight: bolder;
+          font-size: 12px;
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          background-color: rgba(0, 0, 0, 0.5); }
       .products .container .products-grid img {
         height: 320px;
         width: 250px;
