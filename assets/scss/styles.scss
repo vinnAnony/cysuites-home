@@ -175,6 +175,11 @@ $proxima-light: ProximaNovaLight, serif;
     margin-left: 20%;
     margin-right: 18%;
 
+    @media (max-width: 500px){
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
     .heading{
       @include cysuite-heading;
       text-align: left;
@@ -198,6 +203,15 @@ $proxima-light: ProximaNovaLight, serif;
 
     img{
       border-radius: 10px;
+    }
+
+    @media (max-width: 1000px){
+      margin-bottom: 0;
+
+      img{
+        width: 100%;
+        border-radius: 0;
+      }
     }
   }
 
@@ -272,18 +286,30 @@ $proxima-light: ProximaNovaLight, serif;
       }
     }
   }
+  .products-intro{
+
+    @media (max-width: 450px){
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    @media (max-width: 480px){
+      text-align: center;
+    }
+  }
 }
 
 .packages{
   background-color: $cysuite-white;
   .container{
     @include flex-col-center;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: 5%;
 
     .heading{
       @include cysuite-heading;
       margin-bottom: 15px;
+      margin-top: 10%;
     }
 
     .description{
@@ -300,7 +326,7 @@ $proxima-light: ProximaNovaLight, serif;
       padding-bottom: 10px;
       margin-bottom: 50px;
 
-      @media (max-width: 480px){
+      @media (max-width: 750px){
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
 
@@ -309,6 +335,16 @@ $proxima-light: ProximaNovaLight, serif;
         border-radius: 10px;
         box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0 , 0.4);
       }
+    }
+    .packages-intro{
+      @media (max-width: 450px){
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      @media (max-width: 480px){
+        text-align: center;
+      }
+
     }
   }
 }
@@ -322,6 +358,7 @@ $proxima-light: ProximaNovaLight, serif;
     font-family: $proxima-light;
     font-weight: 900;
     color: $cysuite-footerTxt;
+    line-height: 18px;
 
     ul li{
       list-style-type: none;
@@ -338,7 +375,7 @@ $proxima-light: ProximaNovaLight, serif;
     font-family: $proxima-bold;
     padding-bottom: 20px;
 
-    @media (max-width: 480px){
+    @media (max-width: 600px){
       padding-top: 35px;
       padding-bottom: 10px;
     }
@@ -356,11 +393,27 @@ $proxima-light: ProximaNovaLight, serif;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-bottom: 5%;
 
-    @media (max-width: 480px){
-        text-align: center;
+    @media (min-width: 600px) and (max-width: 900px){
+        //text-align: center;
+
+      .links, .contact, .socials{
+        margin-left: 35%;
+      }
+    }
+    @media (max-width: 900px){
+      justify-items: stretch;
     }
   }
 
+  @media (max-width: 600px){
+    .grid-row .links, .contact, .socials{
+      text-align: center;
+    }
+    .socials-icons{
+      justify-content: center;
+    }
+
+  }
   .socials-icons{
     display: flex;
     flex-direction: row;
