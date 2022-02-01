@@ -126,6 +126,15 @@ $proxima-light: ProximaNovaLight, serif;
           font-family: $proxima-light;
         }
       }
+
+      @media (max-width: 745px){
+        flex-direction: column;
+        margin: 2%;
+
+        input{
+          margin: 2%;
+        }
+      }
     }
     .wrapper-btn {
       grid-area: btn;
@@ -152,6 +161,11 @@ $proxima-light: ProximaNovaLight, serif;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
+
+
+      @media (max-width: 500px){
+        flex-direction: column;
+      }
     }
   }
 

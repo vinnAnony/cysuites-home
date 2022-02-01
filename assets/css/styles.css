@@ -77,6 +77,12 @@
           opacity: 0.8;
           color: #f9f9f9;
           font-family: ProximaNovaLight, serif; }
+      @media (max-width: 745px) {
+        .main .main-grid-footer .wrapper-date {
+          flex-direction: column;
+          margin: 2%; }
+          .main .main-grid-footer .wrapper-date input {
+            margin: 2%; } }
     .main .main-grid-footer .wrapper-btn {
       grid-area: btn;
       margin-left: 10%;
@@ -101,6 +107,9 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around; }
+      @media (max-width: 500px) {
+        .main .main-grid-footer .wrapper {
+          flex-direction: column; } }
   .main .container {
     width: 100%;
     display: grid;
