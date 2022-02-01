@@ -176,7 +176,7 @@
       background: linear-gradient(to right, #fca242, #d14a69);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-top: 10%;
+      margin-top: 20%;
       margin-bottom: 15px; }
     .products .container .description {
       font-family: ProximaNovaLight, serif;
@@ -239,7 +239,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 15px;
-      margin-top: 10%; }
+      margin-top: 20%; }
     .packages .container .description {
       font-family: ProximaNovaLight, serif;
       font-size: 15px;
