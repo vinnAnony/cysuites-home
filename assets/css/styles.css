@@ -107,9 +107,6 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around; }
-      @media (max-width: 500px) {
-        .main .main-grid-footer .wrapper {
-          flex-direction: column; } }
   .main .container {
     width: 100%;
     display: grid;
