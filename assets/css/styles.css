@@ -14,6 +14,8 @@
   margin: 0;
   padding: 0;
   max-width: 100%; }
+  * button {
+    cursor: pointer; }
 
 .main {
   width: 100%;
@@ -364,7 +366,8 @@
       list-style-type: none;
       margin-right: 30px; }
       .footer .socials-icons li img {
-        height: 15px; }
+        height: 15px;
+        cursor: pointer; }
 
 .nav-area {
   background: rgba(0, 0, 0, 0.6);
