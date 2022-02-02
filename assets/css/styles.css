@@ -97,15 +97,17 @@
       align-content: center;
       align-items: center; }
       .main .main-grid-footer .wrapper-date input {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.2);
         height: 50%;
         border: none;
         color: #f9f9f9;
-        margin-left: 20px; }
+        margin-left: 20px;
+        border-radius: 3px; }
         .main .main-grid-footer .wrapper-date input::placeholder {
           opacity: 0.8;
           color: #f9f9f9;
-          font-family: ProximaNovaLight, serif; }
+          font-family: ProximaNovaLight, serif;
+          padding-left: 4px; }
       @media (max-width: 745px) {
         .main .main-grid-footer .wrapper-date {
           flex-direction: column;

@@ -149,16 +149,18 @@ $proxima-light: ProximaNovaLight, serif;
       @include flex-row-center;
 
       input{
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.2);
         height: 50%;
         border: none;
         color: $cysuite-white;
         margin-left: 20px;
+        border-radius: 3px;
 
         &::placeholder{
           opacity: 0.8;
           color: $cysuite-white;
           font-family: $proxima-light;
+          padding-left: 4px;
         }
       }
 
